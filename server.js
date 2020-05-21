@@ -9,6 +9,11 @@ proxy.on("proxyRes", (proxyRes, req, res) => {
   cors()(req, res, () => { });
 });
 
+proxy.on('proxyError', (err, req, res) => {
+  res.writeHead(500, { 'Content-Type': 'text/plain' });
+  res.end('Proxying error.');
+});
+
 console.log(
   `Proxy  (╯ ͠° ͟ʖ ͡°)╯┻━┻ \n\rTarget: ${targetURL}\n\rSource: localhost:${port}`
 );

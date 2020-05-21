@@ -18,4 +18,4 @@ Edit `env.list` file and provide remote API endpoint URL and local port.
 
 ### Manual
 
-`npm intall` && `node server`
+`npm install && LOCAL_PORT=3000 REMOTE_ENDPOINT=http://place-here-remote-api-url.com node server`
